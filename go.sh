@@ -6,7 +6,6 @@ speed_test() {
 	printf "%-32s%-24s%-14s\n" "${nodeName}:" "${ipaddress}:" "$(FormatBytes $speedtest)"
 }
 
-
 FormatBytes() {
 	bytes=${1%.*}
 	local Mbps=$( printf "%s" "$bytes" | awk '{ printf "%.2f", $0 / 1024 / 1024 * 8 } END { if (NR == 0) { print "error" } }' )
@@ -30,20 +29,20 @@ speed() {
 	speed_test 'https://sgp-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Singapore, Asian-SG'
 	speed_test 'https://bom-in-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Mumbai, Asian-IN'
 	speed_test 'https://sel-kor-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Seoul, Asian-KR'
-        speed_test 'https://hnd-jp-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Tokyo, Asian-JP'
-        speed_test 'https://ams-nl-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Amsterdam, Europe-NL'
-        speed_test 'https://fra-de-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Frankfurt, Europe-DE'
-        speed_test 'https://lon-gb-ping.vultr.com/vultr.com.100MB.bin' 'Vultr,London, Europe-GB'
-        speed_test 'https://par-fr-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Paris, Europe-FR'
-        speed_test 'https://sto-se-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Stockholm, Europe-SE'
-        speed_test 'https://lax-ca-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Los angeles, North America-US'
-        speed_test 'https://ga-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Atlanta, North America-US'
-        speed_test 'https://il-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Chicago, North America-US'
-        speed_test 'https://tx-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Dallas, North America-US'
-        speed_test 'https://fl-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Miami, North America-US'
-        speed_test 'https://nj-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, New Jersey, North America-US'
-        speed_test 'https://tor-ca-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Toronto, North America-CA'
-        speed_test 'https://sao-br-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Sao Paulo, South America-CA'
+                speed_test 'https://hnd-jp-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Tokyo, Asian-JP'
+                speed_test 'https://ams-nl-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Amsterdam, Europe-NL'
+                speed_test 'https://fra-de-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Frankfurt, Europe-DE'
+                speed_test 'https://lon-gb-ping.vultr.com/vultr.com.100MB.bin' 'Vultr,London, Europe-GB'
+                speed_test 'https://par-fr-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Paris, Europe-FR'
+                speed_test 'https://sto-se-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Stockholm, Europe-SE'
+                speed_test 'https://lax-ca-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Los angeles, North America-US'
+                speed_test 'https://ga-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Atlanta, North America-US'
+                speed_test 'https://il-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Chicago, North America-US'
+                speed_test 'https://tx-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Dallas, North America-US'
+                speed_test 'https://fl-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Miami, North America-US'
+                speed_test 'https://nj-us-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, New Jersey, North America-US'
+                speed_test 'https://tor-ca-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Toronto, North America-CA'
+                speed_test 'https://sao-br-ping.vultr.com/vultr.com.100MB.bin' 'Vultr, Sao Paulo, South America-CA'
 #    	speed_test 'http://speedtest.tokyo.linode.com/100MB-tokyo.bin' 'Linode, Tokyo, Asian-JP'
 	speed_test 'http://speedtest.tokyo2.linode.com/100MB-tokyo2.bin' 'Linode, Tokyo2, Asian-JP'
 	speed_test 'http://speedtest.singapore.linode.com/100MB-singapore.bin' 'Linode, Singapore, Asian-SG'
