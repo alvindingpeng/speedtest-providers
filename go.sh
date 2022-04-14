@@ -6,6 +6,7 @@ speed_test() {
 	printf "%-32s%-24s%-14s\n" "${nodeName}:" "${ipaddress}:" "$(FormatBytes $speedtest)"
 }
 
+
 FormatBytes() {
 	bytes=${1%.*}
 	local Mbps=$( printf "%s" "$bytes" | awk '{ printf "%.2f", $0 / 1024 / 1024 * 8 } END { if (NR == 0) { print "error" } }' )
